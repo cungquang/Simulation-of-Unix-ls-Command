@@ -34,7 +34,7 @@ Sample (command line):
 - `./UnixLs -R`: Recursively go through and return files of the directory tree.
 - `./UnixLs -ilR`, `./UnixLs -liR`, `./UnixLs -ilR`: Combinations of `-i`, `-l`, and `-R`.
 
-## Major Problems of the Command
+## Potential Problems of the Command
 
 ### Symbolic Link
 
