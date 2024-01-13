@@ -1,7 +1,5 @@
 # Simulation of Unix `Ls` Command
 
-### CREATOR NAME: HONG QUANG CUNG
-
 ## Description of the Command
 
 This program contains 6 files zipped in the UnixLsCommand folder:
