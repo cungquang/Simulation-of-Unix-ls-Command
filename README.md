@@ -1,65 +1,47 @@
-# UnixlsCommand
-******************************************************************************************************************
-******              	  										                                                                ******
-******                  	                README FOR UNIXLS LINUX COMMAND					                          ******
-******													                                                                            ******		
-******------------------------------------------------------------------------------------------------------******
-******------------------------------------------------------------------------------------------------------******
-******              	  										                                                                ******
-******					                           CREATOR NAME: HONG QUANG CUNG					                          ******
-******              	  										                                                                ******
-******************************************************************************************************************
+# Simulation of Unix `Ls` Command
 
----------------------------------------- Descripton of simulation ---------------------------------------------
+### CREATOR NAME: HONG QUANG CUNG
 
+## Description of the Command
 
-This program contain 6 files - zip in folder Process Scheduling Simulation:
-- UnixLs.c
-- lsadmin.c
-- lsadmin.h
-- lsfunction.c
-- lsfunction.h
-- makefile
-- README
-- A picture show the sample output
+This program contains 6 files zipped in the UnixLsCommand folder:
 
+- `UnixLs.c`
+- `lsadmin.c`
+- `lsadmin.h`
+- `lsfunction.c`
+- `lsfunction.h`
+- `makefile`
+- `README`
+- A picture showing the sample output
 
----------------------------------------- Instruction for makefile --------------------------------------------
+## Instruction for Makefile
 
+- `make all`: Compile all the files for general use.
+- `make demo`: Run the `ls` command with a default option, listing files in the current working directory.
+- `make valgrind-check`: Run in valgrind mode to check for memory leaks, displaying the sample output.
+- `make valgrind-show`: Run in valgrind mode to display the sample output with memory-leak checks.
+- `make sample-output`: Run in normal mode to display the sample output without memory-leak checks.
+- `make clean`: Clean executable files of the simulation program.
 
-make all - compile all the file for general use
-make demo - this will run the ls command with a default option - set of file of current working directory
-make valgrind-check - run in valgrind mode - the sample output with memory-leak check
-make valgrind-show - run in valgrind mode - the sample output with memory-leak check
-make sample-output - run in normal mode - the sample output without memory-leak check
-make clean - clean executable file of simulation program
+## Instruction for Command Line
 
-
--------------------------------------- Instruction for Command Line ------------------------------------------
-
-
-GENERAL SYNTAX: ./UnixLs<space>-[l/i/R]<space>[valid directories]
+### GENERAL SYNTAX: `./UnixLs-[l/i/R][valid directories]`
 
 Sample (command line):
-./UnixLs -> return the default option of ls command - current working directory
-./UnixLs . -> return the files in current working directory
-./UnixLs -i -> return the inode number and file name of current working directory
-./UnixLs -l -> return the inode number and other information (permission, owner ID, group owner ID, size, last
-modified date, file name)
-./UnixLs -R -> recursively go through and return of file of the directory tree
-./UnixLs -ilR/liR/ilR -> the combination of -i, -l and -R
+- `./UnixLs`: Return the default option of `ls` command for the current working directory.
+- `./UnixLs .`: Return the files in the current working directory.
+- `./UnixLs -i`: Return the inode number and file name of the current working directory.
+- `./UnixLs -l`: Return the inode number and other information (permission, owner ID, group owner ID, size, last modified date, file name).
+- `./UnixLs -R`: Recursively go through and return files of the directory tree.
+- `./UnixLs -ilR`, `./UnixLs -liR`, `./UnixLs -ilR`: Combinations of `-i`, `-l`, and `-R`.
 
+## Major Problems of the Command
 
--------------------------------------- Major Problems of simulation ------------------------------------------
+### Symbolic Link
 
-Symbolic link:
-- There are a few minor problem with printing format for the symbolic link 
+There are a few minor problems with the printing format for symbolic links.
 
-Printing option:
-- There are a few problems with the format of printing function, which do not perform as well as actual "ls" 
-command
+### Printing Option
 
-
-##############################################################################################################
-##############################################################################################################
-
+There are a few issues with the format of the printing function, which do not perform as well as the actual `ls` command.
